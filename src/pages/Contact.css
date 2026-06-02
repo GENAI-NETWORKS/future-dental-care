@@ -1,0 +1,218 @@
+/* Contact Page Styles */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+  }
+}
+
+.contact-info-panel,
+.appointment-form-panel {
+  background: var(--color-surface);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(10, 61, 124, 0.05);
+}
+
+.appointment-form-panel {
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--color-primary);
+}
+
+.panel-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.panel-desc {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+/* Contact Details */
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-details-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-details-list li:hover .contact-icon-box {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.contact-text h3 {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.contact-text p,
+.contact-text a {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+  color: var(--color-secondary);
+}
+
+.map-embed-placeholder {
+  background: var(--color-bg);
+  border-radius: 16px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-text-muted);
+  border: 2px dashed rgba(10, 61, 124, 0.2);
+}
+
+/* Form Styles */
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.875rem 1rem;
+  border: 1px solid rgba(10, 61, 124, 0.2);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(10, 61, 124, 0.1);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  height: 54px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 201, 167, 0.1);
+  color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.success-message h3 {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.success-message p {
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+}

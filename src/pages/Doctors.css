@@ -1,0 +1,31 @@
+/* Doctors Page Styles */
+
+.doctors-page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .doctors-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.expertise-summary {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--color-surface);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(10, 61, 124, 0.05);
+}
+
+.expertise-summary p {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 0;
+}
