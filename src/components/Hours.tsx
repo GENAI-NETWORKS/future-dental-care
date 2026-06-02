@@ -22,7 +22,7 @@ const Hours = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-navy/20 relative overflow-hidden">
+    <section id="contact" className="py-12 bg-navy/20 relative overflow-hidden">
       {/* Radial Gold Glow Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px]"></div>

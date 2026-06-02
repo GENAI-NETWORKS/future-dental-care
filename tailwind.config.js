@@ -25,7 +25,7 @@ export default {
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['DM Sans', 'sans-serif'],
       },
       animation: {
         'marquee': 'marquee 25s linear infinite',

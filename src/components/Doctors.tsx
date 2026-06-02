@@ -23,7 +23,7 @@ const Doctors = () => {
   ];
 
   return (
-    <section id="doctors" className="py-24 bg-transparent relative">
+    <section id="doctors" className="py-12 bg-transparent relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-bold tracking-widest text-gold uppercase mb-3">Our Experts</h2>

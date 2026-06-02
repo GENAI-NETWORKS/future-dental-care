@@ -12,7 +12,7 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="reviews" className="py-24 bg-transparent relative overflow-hidden">
+    <section id="reviews" className="py-12 bg-transparent relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header & Rating Stats */}

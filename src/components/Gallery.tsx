@@ -8,7 +8,7 @@ const Gallery = () => {
   const images = [img3, img4, img5, img6, img7];
 
   return (
-    <section id="gallery" className="py-24 bg-navy/20 relative overflow-hidden">
+    <section id="gallery" className="py-12 bg-navy/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-bold tracking-widest text-gold uppercase mb-3">Our Facility</h2>
