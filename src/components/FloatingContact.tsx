@@ -6,8 +6,8 @@ const FloatingContact = () => {
 
   const actions = [
     { icon: <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />, label: 'Book Appointment', href: '#contact' },
-    { icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />, label: 'Location', href: '#contact' },
-    { icon: <Phone className="w-4 h-4 sm:w-5 sm:h-5" />, label: 'Call', href: 'tel:09894425686' },
+    { icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />, label: 'Location', href: 'https://maps.google.com/?q=Future+Dental+Care+Srinivas+Complex,+4/2-307,+Kannagi+Nagar,+Angammal+Colony,+Salem,+Tamil+Nadu+636009', target: '_blank' },
+    { icon: <Phone className="w-4 h-4 sm:w-5 sm:h-5" />, label: 'Call', href: 'tel:9894425686' },
   ];
 
   return (
@@ -19,6 +19,8 @@ const FloatingContact = () => {
             <a
               key={index}
               href={action.href}
+              target={action.target || '_self'}
+              rel={action.target === '_blank' ? 'noopener noreferrer' : undefined}
               className="flex-1 bg-gold hover:bg-gold-light text-navy rounded-lg py-2.5 px-1 flex flex-row items-center justify-center gap-1.5 text-[11px] sm:text-xs font-semibold tracking-wide transition-colors"
             >
               {action.icon}
@@ -41,6 +43,8 @@ const FloatingContact = () => {
             <a
               key={index}
               href={action.href}
+              target={action.target || '_self'}
+              rel={action.target === '_blank' ? 'noopener noreferrer' : undefined}
               className="w-12 h-12 rounded-full bg-navy border border-gold/30 flex items-center justify-center text-gold shadow-[0_0_15px_rgba(201,168,76,0.15)] hover:bg-gold hover:text-navy transition-all group relative"
               style={{ transitionDelay: isOpen ? `${(actions.length - 1 - index) * 50}ms` : '0ms' }}
             >

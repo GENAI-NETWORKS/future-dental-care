@@ -4,16 +4,18 @@ import { MapPin, Phone, Send, Clock } from 'lucide-react';
 const Hours = () => {
   const [formData, setFormData] = useState({
     name: '',
-    service: 'General Enquiry',
+    phone: '',
+    service: '',
+    date: '',
     message: ''
   });
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, service, message } = formData;
+    const { name, phone, service, date, message } = formData;
     
     // Construct WhatsApp message
-    const waMessage = `*New Enquiry from Website*%0A%0A*Name:* ${name}%0A*Service:* ${service}%0A*Message:* ${message}`;
+    const waMessage = `*New Enquiry from Website*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Date:* ${date}%0A*Message:* ${message}`;
     const waUrl = `https://wa.me/919894425686?text=${waMessage}`;
     
     window.open(waUrl, '_blank');
@@ -73,8 +75,9 @@ const Hours = () => {
                   <h4 className="text-white font-bold">Location</h4>
                 </div>
                 <div className="pl-13 text-sm text-text-muted space-y-1">
-                  <p>Srinivas Complex, 4/2-307,</p>
-                  <p>Kannagi Nagar, Salem 636009</p>
+                  <p>Future Dental Care Srinivas Complex, 4/2-307,</p>
+                  <p>Kannagi Nagar, Angammal Colony,</p>
+                  <p>Salem, Tamil Nadu 636009</p>
                 </div>
               </div>
             </div>
@@ -92,46 +95,81 @@ const Hours = () => {
               Send us a message and we'll reply directly on WhatsApp.
             </p>
             
-            <form onSubmit={handleWhatsAppSubmit} className="space-y-5 relative z-10">
+            <form onSubmit={handleWhatsAppSubmit} className="space-y-4 relative z-10">
               <div>
+                <label className="block text-white/80 text-sm font-medium mb-1.5">Full Name *</label>
                 <input 
                   type="text" 
                   required
-                  placeholder="Your Name" 
+                  placeholder="John Doe" 
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all"
+                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all"
                 />
               </div>
+              
               <div>
+                <label className="block text-white/80 text-sm font-medium mb-1.5">Phone Number *</label>
+                <input 
+                  type="tel" 
+                  required
+                  pattern="[0-9+ ]{10,15}"
+                  placeholder="+91 98765 43210" 
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-1.5">Service Type *</label>
                 <select 
+                  required
                   value={formData.service}
                   onChange={(e) => setFormData({...formData, service: e.target.value})}
-                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all appearance-none"
+                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all appearance-none"
                 >
-                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="" disabled>Select a service</option>
+                  <option value="General Checkup">General Checkup</option>
                   <option value="Root Canal Treatment">Root Canal Treatment</option>
                   <option value="Dental Implants">Dental Implants</option>
                   <option value="Orthodontic Treatment">Orthodontic Treatment</option>
                   <option value="Tooth Extraction">Tooth Extraction</option>
                 </select>
               </div>
+
               <div>
+                <label className="block text-white/80 text-sm font-medium mb-1.5">Preferred Date *</label>
+                <input 
+                  type="date" 
+                  required
+                  min={new Date().toISOString().split('T')[0]}
+                  value={formData.date}
+                  onChange={(e) => setFormData({...formData, date: e.target.value})}
+                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all appearance-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-1.5">Message / Complaint</label>
                 <textarea 
                   required
-                  placeholder="How can we help you?" 
-                  rows={4}
+                  placeholder="Message / Complaint" 
+                  rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all resize-none"
+                  className="w-full bg-navy/50 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all resize-none"
                 ></textarea>
               </div>
-              <button 
-                type="submit"
-                className="w-fit mx-auto bg-gold text-navy font-bold rounded-xl px-8 py-4 flex items-center justify-center gap-2 hover:bg-gold-light transition-all transform hover:-translate-y-1 shadow-lg"
-              >
-                <Send className="w-5 h-5" /> Send via WhatsApp
-              </button>
+              
+              <div className="pt-2">
+                <button 
+                  type="submit"
+                  className="w-fit mx-auto bg-gold text-navy font-bold rounded-xl px-8 py-4 flex items-center justify-center gap-2 hover:bg-gold-light transition-all transform hover:-translate-y-1 shadow-lg"
+                >
+                  <Send className="w-5 h-5" /> Send via WhatsApp
+                </button>
+              </div>
             </form>
           </div>
 

@@ -145,20 +145,20 @@ const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form className="appointment-form" onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <label htmlFor="name">Full Name *</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      name="name" 
-                      required 
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  
                   <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="name">Full Name *</label>
+                      <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    
                     <div className="form-group">
                       <label htmlFor="phone">Phone Number *</label>
                       <input 
@@ -166,43 +166,18 @@ const Contact: React.FC = () => {
                         id="phone" 
                         name="phone" 
                         required 
-                        pattern="[0-9]{10}"
-                        title="Please enter a valid 10-digit phone number"
+                        pattern="[0-9+ ]{10,15}"
+                        title="Please enter a valid phone number"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="9876543210"
-                      />
-                    </div>
-                    
-                    <div className="form-group">
-                      <label htmlFor="email">Email Address</label>
-                      <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@example.com"
+                        placeholder="+91 98765 43210"
                       />
                     </div>
                   </div>
                   
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="date">Preferred Date *</label>
-                      <input 
-                        type="date" 
-                        id="date" 
-                        name="date" 
-                        required 
-                        value={formData.date}
-                        onChange={handleChange}
-                        min={new Date().toISOString().split('T')[0]}
-                      />
-                    </div>
-                    
-                    <div className="form-group">
-                      <label htmlFor="service">Service Needed *</label>
+                      <label htmlFor="service">Service Type *</label>
                       <select 
                         id="service" 
                         name="service" 
@@ -219,10 +194,24 @@ const Contact: React.FC = () => {
                         ))}
                       </select>
                     </div>
+
+                    <div className="form-group">
+                      <label htmlFor="date">Preferred Date *</label>
+                      <input 
+                        type="date" 
+                        id="date" 
+                        name="date" 
+                        required 
+                        value={formData.date}
+                        onChange={handleChange}
+                        min={new Date().toISOString().split('T')[0]}
+                        placeholder="dd/mm/yyyy"
+                      />
+                    </div>
                   </div>
                   
                   <div className="form-group">
-                    <label htmlFor="message">Additional Message</label>
+                    <label htmlFor="message">Message / Complaint</label>
                     <textarea 
                       id="message" 
                       name="message" 

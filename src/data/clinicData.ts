@@ -14,7 +14,7 @@ import {
 export const clinicInfo = {
   name: "Future Dental Care",
   tagline: "Smile! It Increases Your Face Value",
-  address: "4/2-307, Srinivasa Complex, Angammal Colony, Salem - 636 009",
+  address: "Future Dental Care Srinivas Complex, 4/2-307, Kannagi Nagar, Angammal Colony, Salem, Tamil Nadu 636009",
   email: "futuredentalcare2022@gmail.com",
   phone: "96982 82828",
   phoneRaw: "+919698282828", // For tel: links

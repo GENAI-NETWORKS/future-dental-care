@@ -40,13 +40,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold shrink-0 mt-1" />
                 <span className="text-text-muted leading-relaxed">
-                  Srinivas Complex, 4/2-307,<br />Kannagi Nagar, Angammal Colony,<br />Salem, Tamil Nadu 636009
+                  Future Dental Care Srinivas Complex, 4/2-307,<br />Kannagi Nagar, Angammal Colony,<br />Salem, Tamil Nadu 636009
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold shrink-0" />
                 <a href="tel:09894425686" className="text-text-muted hover:text-gold transition-colors">
-                  098944 25686
+                  98944 25686
                 </a>
               </li>
               <li className="flex items-center gap-3">
