@@ -26,12 +26,12 @@ const ContactCTA = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
           <a 
             href="tel:09894425686" 
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gold text-navy font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
+            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
           >
             {/* Shimmer Effect */}
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite]"></div>
-            <Phone className="w-6 h-6 relative z-10" />
-            <span className="text-xl relative z-10">Call Now: 98944 25686</span>
+            <Phone className="w-5 h-5 relative z-10" />
+            <span className="text-base relative z-10">Call Now: 98944 25686</span>
           </a>
         </div>
 

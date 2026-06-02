@@ -44,11 +44,11 @@ const Hours = () => {
               
               <a 
                 href="tel:09894425686" 
-                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gold text-navy font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
+                className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
               >
                 <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite]"></div>
                 <Phone className="w-5 h-5 relative z-10" />
-                <span className="text-lg relative z-10">Call Now: 98944 25686</span>
+                <span className="text-base relative z-10">Call Now: 98944 25686</span>
               </a>
             </div>
 

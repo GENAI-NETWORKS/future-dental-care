@@ -24,15 +24,15 @@ const Reviews = () => {
             </h3>
           </div>
           
-          <div className="bg-navy p-6 rounded-2xl border border-white/5 flex items-center gap-6 shrink-0">
-            <div className="text-5xl font-serif font-bold text-gold">5.0</div>
+          <div className="bg-navy p-4 rounded-xl border border-white/5 flex items-center gap-4 shrink-0">
+            <div className="text-4xl font-serif font-bold text-gold">5.0</div>
             <div>
               <div className="flex gap-1 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                  <Star key={i} className="w-4 h-4 text-gold fill-gold" />
                 ))}
               </div>
-              <p className="text-text-muted font-medium">18 Google Reviews</p>
+              <p className="text-text-muted text-sm font-medium">18 Google Reviews</p>
             </div>
           </div>
         </div>
